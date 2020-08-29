@@ -51,7 +51,7 @@ const GOOGLE_CLIENT_SECRET = "tjbTEWwCq-fUC3KJdsbtnhdj";
 passport.use(
   new GoogleStrategy(
     {
-      clientId: GOOGLE_CLIENT_ID,
+      clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
       callbackURL: "http://localhost:3000/auth/google/callback",
     },
@@ -71,7 +71,7 @@ app.get(
   "/auth/google/callback",
   passport.authenticate("google", { failureRedirect: "/error" }),
   function (req, res) {
-    // successful authentication, redirect succss.
+    // Successful authentication, redirect success.
     res.redirect("/success");
   }
 );
