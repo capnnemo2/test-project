@@ -29,7 +29,7 @@ let userProfile;
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.stack("view engine", "ejs");
+app.set("view engine", "ejs");
 
 app.get("/success", (req, res) => res.send(userProfile));
 app.get("/error", (req, res) => res.send("error logging in"));
